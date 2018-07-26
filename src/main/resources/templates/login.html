@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Login</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'/>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'/>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'/>
+    <link rel="stylesheet" href="dist/css/loginstyle.css"/>
+</head>
+
+<body>
+
+<div class="container-login100" style="background-image: url('dist/img/bg-01.jpg');">
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+        <div class="container">
+            <div class="info">
+                <h1>SBS</h1><span>Made with <i class="fa fa-heart"></i> by <a href="https://www.facebook.com/m3atallah">Muhammed Atallah</a></span>
+            </div>
+        </div>
+        <div class="form">
+            <div class="thumbnail"><img src="dist/img/hat.svg"/></div>
+            <!--<div class="thumbnail"><img src="dist/img/Graduation_cap.png" style="margin-top: -15px;"/></div>-->
+            <form method="post" class="register-form">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="User" id="username"/>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" name="password" placeholder="Password"/>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+
+            </form>
+            <form th:action="@{/login}" method="post" class="login-form">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" name="username" placeholder="User"/>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" name="password" placeholder="Password"/>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
+            </form>
+
+        </div>
+        <div class="form-group" align="center">
+            <a class="form-group" href="/studentsGuest">Registration student</a>
+        </div>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    </div>
+
+</div>
+</body>
+<script src="dist/js/loginindex.js"></script>
+</html>
